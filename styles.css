@@ -95,13 +95,64 @@ nav {
         text-transform: uppercase;
         color: var(--white);
         text-decoration: none;
-        border-bottom: 5px solid var(--red);
 
         &:hover {
             background: var(--yellow);
             color: var(--black);
-            border-bottom: 5px solid var(--black); 
+            box-shadow: inset 0 -5px 0 var(--black);
         }
 
     }
 }
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    
+    h2 {
+        width: 100%;
+        text-align: center;
+        text-transform: uppercase;
+        padding-left: 1rem;
+    }
+
+    .product-card {
+        max-width: calc(33% - 2rem);
+        background-color: var(--black);
+        color: var(--white);
+        padding: 1rem;
+        box-sizing: border-box;
+        border-bottom: 1rem solid var(--green);
+        margin-bottom: 1rem;
+
+        a {
+            color: var(--yellow);
+            text-decoration: none;
+        }
+
+        h3 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: var(--green);
+            color: var(--white);
+            font-family: "Rubik", sans-serif;
+            font-size: 1rem;
+            padding: 0.5 1rem;
+        }
+    
+        img{
+            width: 100%;
+        }
+    }
+
+}
+
