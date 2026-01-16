@@ -55,6 +55,7 @@ h3 {
     max-width: var(--maxwidth);
     background-color: var(--white);
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -78,7 +79,7 @@ header {
         color: var(--white);
         display: flex;
         justify-content: center;
-        align-items: center;    
+        align-items: center;
         position: absolute;
         top: -15px;
         left: -12px;
@@ -86,7 +87,7 @@ header {
 }
 
 nav {
-    background-color: var(--red);
+    background: var(--red);
     color: var(--white);
 
     a {
@@ -95,32 +96,35 @@ nav {
         text-transform: uppercase;
         color: var(--white);
         text-decoration: none;
+        
 
         &:hover {
             background: var(--yellow);
             color: var(--black);
             box-shadow: inset 0 -5px 0 var(--black);
         }
-
     }
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 1rem;
-    
+    #product-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        gap: 1rem;
+    }
+
     h2 {
         width: 100%;
         text-align: center;
         text-transform: uppercase;
-        padding-left: 1rem;
     }
 
     .product-card {
         max-width: calc(33% - 2rem);
-        background-color: var(--black);
+        background: var(--black);
         color: var(--white);
         padding: 1rem;
         box-sizing: border-box;
@@ -136,8 +140,9 @@ main {
             margin: 0;
             text-transform: uppercase;
         }
-
+        
         p {
+            margin: 0;
             margin-bottom: 5px;
         }
 
@@ -146,13 +151,32 @@ main {
             color: var(--white);
             font-family: "Rubik", sans-serif;
             font-size: 1rem;
-            padding: 0.5 1rem;
+            padding: 0.5rem 1rem;
         }
-    
-        img{
+
+        img {
             width: 100%;
         }
     }
-
 }
 
+/* HANDLEVOGN */
+#cart {
+    width: 550px;
+    background: var(--black);
+    border-left: 0.5rem solid var(--green);
+    border-bottom: 0.5rem solid var(--green);
+    padding: 1rem;
+    position: absolute;
+    top: 74px;
+    right: 0;
+
+    &.hidden {
+        visibility: hidden;
+    }
+
+    table {
+        width: 100%;
+        color: var(--white);
+    }
+}
